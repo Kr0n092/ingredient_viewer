@@ -8,8 +8,9 @@ class Product(models.Model):
         - a name
         - ingredients of the product
     """
-    product_name = models.TextField(primary_key=True, default='Add product here.')
-    ingredients = models.TextField(default='Add ingredients here.')
+    product_name = models.TextField(primary_key=True, help_text='Add product here.')
+    ingredients = models.TextField(help_text='Add ingredients here.')
+    image = models.ImageField(blank=False, help_text='Add an image for the product.')
 
     def __str__(self):
         return '{}'.format(self.product_name)
