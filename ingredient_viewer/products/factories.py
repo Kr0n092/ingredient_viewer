@@ -8,5 +8,5 @@ class ProductFactory(factory.DjangoModelFactory):
         model = models.Product
 
     product_name = factory.Sequence(lambda n: 'Product #{}'.format(n))
-    ingredients = 'A short list of ingredients'
+    ingredients = 'butter;cheese;eggs'
     image = factory.django.ImageField(color='orange', format='PNG')
