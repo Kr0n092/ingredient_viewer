@@ -15,6 +15,7 @@ install:
 # Create database and migrate changes
 before_script:
     - psql -c 'create database travis_ci_test;' -U postgres
+    - psql -c 'create database products;' -U postgres
     - python ingredient_viewer/manage.py makemigrations
     - python ingredient_viewer/manage.py migrate
 
