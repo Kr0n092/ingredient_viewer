@@ -21,4 +21,4 @@ before_script:
 
 # Do unittests
 script:
-    - python ingredient_viewer/manage.py test
+    - cd ingredient_viewer && python manage.py test
