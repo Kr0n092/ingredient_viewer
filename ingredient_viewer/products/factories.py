@@ -9,3 +9,4 @@ class ProductFactory(factory.DjangoModelFactory):
 
     product_name = factory.Sequence(lambda n: 'Product #{}'.format(n))
     ingredients = 'A short list of ingredients'
+    image = factory.django.ImageField(color='orange', format='PNG')
