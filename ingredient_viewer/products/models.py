@@ -9,7 +9,7 @@ class Product(models.Model):
         - ingredients of the product
     """
     product_name = models.TextField(primary_key=True, help_text='Add product here.')
-    ingredients = models.TextField(help_text='Add ingredients here.')
+    ingredients = models.TextField(help_text='Add ingredients here.', null=True, blank=True)
     image = models.ImageField(blank=False, help_text='Add an image for the product.')
 
     def __str__(self):
