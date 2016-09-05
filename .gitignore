@@ -51,3 +51,6 @@ fabric.properties
 
 # Pycache
 __pycache__
+
+# Static files
+media
