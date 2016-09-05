@@ -1,0 +1,10 @@
+Django==1.10
+ecdsa==0.13
+factory-boy==2.7.0
+fake-factory==0.6.0
+paramiko==1.17.2
+Pillow==3.3.1
+psycopg2==2.6.2
+pycrypto==2.6.1
+python-dateutil==2.5.3
+six==1.10.0

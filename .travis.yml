@@ -1,0 +1,23 @@
+language: python
+python:
+    - "3.5"
+
+# Use postgresql as DBM tool
+addons:
+    - postgresql: "9.5"
+services:
+    - postgresql
+
+# command to install dependencies
+install:
+    - pip install -r requirements.txt
+
+# Create database and migrate changes
+before_script:
+    - psql -c 'create database travis_ci_test;' -U postgres
+    - python ingredient_viewer/manage.py makemigrations
+    - python ingredient_viewer/manage.py migrate
+
+# Do unittests
+script:
+    - python ingredient_viewer/manage.py test
