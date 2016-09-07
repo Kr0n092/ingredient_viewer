@@ -1,0 +1,53 @@
+/*----------
+CSS RESET
+----------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------
+IMAGES
+---------*/
+.responsive-image {
+    -webkit-box-flex: auto;
+    -ms-flex: auto;
+    flex: auto;
+    width: 200px;
+    margin: .5vw;
+}
+
+.responsive-image img {
+    width: 100%;
+    height: auto;
+}
+
+.tg {
+    border-collapse:collapse;
+    border-spacing:0;
+    margin: auto;
+    margin-top: 10%;
+}
+.tg td {
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+}
+.tg th {
+    border-style:solid;
+    border-width:1px;
+    word-break:normal;
+    text-align: left;
+}
+.tg .text {
+    vertical-align:top
+}
+@media screen and (max-width: 767px) {
+    .tg-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin: auto;
+    }
+}

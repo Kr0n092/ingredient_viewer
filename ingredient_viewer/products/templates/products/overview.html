@@ -1,7 +1,38 @@
-<h1>Hello world</h1>
-<p>Number of products: {{ product_list|length }}</p>
-{% for product in product_list %}
-    <h1>{{ product.product_name }}</h1>
-    <p>{{ product.ingredients }}</p>
-    <img src="{{ MEDIA_URL }}{{ product.image }}" alt="Image of {{ product.product_name }}">
-{% endfor %}
+<!doctype html>
+
+<html lang="nl">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Alle producten</title>
+        <meta name="description" content="Alle producten">
+        <meta name="author" content="Olivier">
+
+        <link rel="stylesheet" href="../../static/products/style.css">
+    </head>
+
+    <body>
+
+        {% for product in product_list %}
+            <div class="tg-wrap">
+                <table class="tg">
+                    <tr>
+                        <th class="tg-yw4l" colspan="2">
+                            <h1>{{ product.product_name }}</h1>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="responsive-image">
+                                <img src="{{ MEDIA_URL }}{{ product.image }}" alt="Image of {{ product.product_name }}">
+                            </div>
+                        </td>
+                        <td class="text">
+                            <p>{{ product.ingredients }}</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        {% endfor %}
+    </body>
+</html>
